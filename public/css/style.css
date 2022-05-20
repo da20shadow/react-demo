@@ -1,0 +1,152 @@
+/* ---- Project Colors ---- */
+/* ---- Buttons Style ---- */
+* {
+  margin: 0;
+}
+
+h1, h2, h3, h4, p {
+  color: #002869;
+}
+
+body {
+  background-color: #F2F7FF;
+}
+
+.dropdown-item {
+  color: #002869;
+  font-weight: 600;
+  width: 94%;
+  margin: 0 auto;
+}
+
+.dropdown-item:hover {
+  background-color: #e5f0fa;
+  color: #086bc9;
+  border-radius: 0.325rem;
+}
+
+.dropdown-item:hover i {
+  color: #086bc9;
+}
+
+#categories-menu {
+  background-color: #e5f0fa;
+}
+
+.dropdown-menu {
+  font-weight: 600;
+  min-width: 16rem;
+}
+
+.nav-link {
+  color: #002869;
+  font-weight: 600;
+}
+
+#avatar-dropdown {
+  border-radius: 0.325rem;
+}
+
+.sign-out:hover {
+  background-color: rgba(214, 41, 62, 0.1);
+  color: #d6293e;
+  border-radius: 0.325rem;
+}
+
+.sign-out:hover i {
+  color: #d6293e;
+}
+
+.stat {
+  border-radius: 11px;
+  height: 120px;
+}
+
+.stat-heart {
+  padding: 0 -12px;
+  background-color: #fef6e0;
+}
+
+.stat-heart i {
+  color: #f7c32e;
+}
+
+.stat-coin {
+  background-color: #e8ebed;
+}
+
+.stat-coin i {
+  color: #1d3b53;
+}
+
+.stat-reviews {
+  background-color: #f0ebf9;
+}
+
+.stat-reviews i {
+  color: #6f42c1;
+}
+
+.stat-reviews button {
+  background-color: #6f42c1;
+  color: #f0ebf9;
+}
+
+.stat-reviews button:hover {
+  background-color: #582da6;
+  color: #ede8f6;
+}
+
+.stat-members {
+  background-color: #e7f6f8;
+}
+
+.stat-members i {
+  color: #17a2b8;
+}
+
+/* ----- Heading 1 - 6 & Paragraphs ----- */
+p {
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+  line-height: 1.25;
+  font-size: 1.0rem;
+}
+
+/* ----- Buttons ---- */
+.n-btn {
+  background-color: #2263dc;
+  color: #F2F7FF;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 1.0rem;
+}
+
+.n-btn:hover {
+  background-color: #08355e;
+}
+
+.lg-btn {
+  background-color: #2263dc;
+  color: #F2F7FF;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 1.0rem;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+}
+
+.lg-btn:hover {
+  background-color: #08355e;
+}
+/*# sourceMappingURL=style.css.map */

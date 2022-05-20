@@ -1,0 +1,53 @@
+//Heading 1 H1
+@mixin heading1{
+    font-family: "Heebo", sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 3.2rem;
+  }
+  
+  //Heading 2 H2
+  @mixin heading2{
+    @include heading1();
+    font-size: 2.5rem;
+  }
+  
+  //Heading 3 H3
+  @mixin heading3{
+    @include heading1();
+    font-size: 1.7rem;
+  }
+  
+  //Normal Paragraph
+  @mixin normalP{
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+    line-height: 1.25;
+    font-size: 1.0rem;
+  }
+  
+  
+  /* ---- Buttons Style ---- */
+  
+  //Normal Button
+  @mixin n-btn{
+    background-color: $accentColorTan;
+    color: $neutralBlue;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 1.0rem;
+    &:hover{
+      background-color: $primaryColor;
+    }
+  }
+  
+  //Large Button
+  @mixin lg-btn{
+    @include n-btn();
+    padding: 15px 30px;
+    font-size: 1.3rem;
+  }
