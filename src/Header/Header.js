@@ -1,5 +1,6 @@
 import CategoryMenu from "./CategoryMenu";
 import MainMenu from "./MainMenu";
+import {Link} from 'react-router-dom';
 
 function Header() {
     return (
@@ -8,12 +9,12 @@ function Header() {
             <div className="container-fluid px-3 px-xl-5">
                 
                 {/* Logo */}
-                <a href="#" className="navbar-brand">
+                <Link to="home" className="navbar-brand">
                     LOGO
                     {/* <img src={assets/img/logo.png} alt={Logo} 
                         width={'160px'} height={'30px'} 
                         className="light-mode-item navbar-brand-item"/> */}
-                </a>
+                </Link>
 
                 {/* Open menu button for small devices */}
                 <button className="navbar-toggler ms-auto collapsed" 

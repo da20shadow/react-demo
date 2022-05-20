@@ -1,50 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import Home from './Home/Home';
+import Login from './Home/Login';
+import Error from './Home/Error';
 import {useState} from 'react';
+import {Routes, Route, Link} from 'react-router-dom';
+
 
 function App() {
-
-  let [tasks,setTasks] = useState(
-    [
-      {id: 1, title: "Task title 1"}, 
-      {id: 2, title: "Task Title 2"}, 
-      {id: 3, title: "Task Title 3"}
-    ]
-    );
-
-  console.log(tasks);
-
   return (
     <>
-  
-    <div className="App">
-
       <Header/>
+      <main className="container">
+        
+        <Routes>
 
-      <ul>
-        {tasks.map((task) =><li key={task.id}>{task.title}</li>)}
-      </ul>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<Error />} /> {/* Default */}
 
-      <header className="App-header">
-      
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello React App!  
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    <footer style={{textAlign: 'center'}}>
-      copyright &copy; 2022
-    </footer>
+        </Routes>
+
+        <nav>
+          <Link to="/register" className="btn btn-primary btn-lg">Register Now</Link>
+        </nav>
+
+      </main>
+      <Footer/>
     </>
   );
 }

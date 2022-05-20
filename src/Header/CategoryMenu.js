@@ -1,16 +1,17 @@
+import {Link} from 'react-router-dom';
 function CategoryMenu(){
     return (
         <div className="nav-item dropdown rounded-3 border">
-            <a className="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="#" className="nav-link " id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i className="bi bi-ui-radios-grid"></i><span> Category</span>
             </a>
                             
             <div className="dropdown-menu shadow-lg" aria-labelledby="navbarDropdownMenuLink">
-                <a className="dropdown-item " href="ptc_categories.php"><i className="bi bi-mouse2"></i> PTC sites</a>
-                <a className="dropdown-item " href="#"><i className="bi bi-pie-chart"></i> Revenue Share Sites</a>
-                <a className="dropdown-item " href="#"><i className="bi bi-minecart-loaded"></i> Cloud Mining sites</a>
+                <Link to="ptc_categories" className="dropdown-item "><i className="bi bi-mouse2"></i> PTC sites</Link>
+                <Link to="revshares" className="dropdown-item "><i className="bi bi-pie-chart"></i> Revenue Share Sites</Link>
+                <Link to="cloud_mining" className="dropdown-item "><i className="bi bi-minecart-loaded"></i> Cloud Mining sites</Link>
                 <hr className="dropdown-divider"/>
-                <a className="dropdown-item" href="#">All Categories</a>
+                <Link to="all_categories" className="dropdown-item">All Categories</Link>
             </div>
         </div>
     );
