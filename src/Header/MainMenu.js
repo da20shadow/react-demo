@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 function MainMenu() {
     return (
@@ -18,8 +18,15 @@ function MainMenu() {
                             </div>
                         </div>
                         {/* Add New ad, post.. Dropdown END */}
-                        <Link to="login" className="nav-link"><i className="bi bi-box-arrow-in-right"></i> Login</Link>
-                        <Link to="register" className="nav-link"><i className="bi bi-person-plus"></i> Register</Link>
+                        <NavLink to="login"
+                            className={({ isActive }) =>
+                            isActive ? 'nav-link activeNav' : 'nav-link'
+                            }><i className="bi bi-box-arrow-in-right"></i> Login
+                        </NavLink>
+                        <NavLink to="register" 
+                        className={({ isActive }) =>
+                        isActive ? 'nav-link activeNav' : 'nav-link'
+                        }><i className="bi bi-person-plus"></i> Register</NavLink>
                         <Link to="report_scam" className="nav-link" data-bs-toggle="modal" data-bs-target="#reportProjectModal"><i className="bi bi-exclamation-triangle"></i> Report SCAM</Link>
         </div>
     );
