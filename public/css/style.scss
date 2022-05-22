@@ -4,9 +4,6 @@
 *{
     margin: 0;
   }
-  .activeNav{
-    background-color: lightblue;
-  }
 
   h1,h2,h3,h4,p{
     color: $primaryTextColor;
@@ -15,47 +12,6 @@
     background-color: $neutralBlue;
   }
   
-  //Dropdown Items
-  .dropdown-item {
-    color: $primaryTextColor;
-    font-weight: 600;
-    width: 94%;
-    margin: 0 auto;
-    &:hover{
-      background-color: #e5f0fa;
-      color: #086bc9;
-      border-radius: 0.325rem;
-      i{
-        color: #086bc9;
-      }
-    }
-  }
-  //Category dropdown button
-  #categories-menu{
-    background-color: #e5f0fa;
-  }
-  //Bootstrap dropdown
-  .dropdown-menu{
-    font-weight: 600;
-    min-width: 16rem;
-  }
-  //Bootstrap nav links
-  .nav-link{
-    color: $primaryTextColor;
-    font-weight: 600;
-  }
-  // Avatar Dropdown Menu
-  #avatar-dropdown{
-    border-radius: 0.325rem;
-  }
-  .sign-out:hover{
-    background-color: rgba(214, 41, 62, 0.1);
-    color: #d6293e;
-    border-radius: 0.325rem;
-    i{
-      color: #d6293e;
-    }
-  }
   //Blog Statistics
   .stat{
     //margin: 20px auto;

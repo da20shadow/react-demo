@@ -2,9 +2,9 @@ import {Link} from 'react-router-dom';
 function CategoryMenu(){
     return (
         <div className="nav-item dropdown rounded-3 border">
-            <a href="#" className="nav-link " id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <Link to="/" className="nav-link " id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i className="bi bi-ui-radios-grid"></i><span> Category</span>
-            </a>
+            </Link>
                             
             <div className="dropdown-menu shadow-lg" aria-labelledby="navbarDropdownMenuLink">
                 <Link to="ptc_categories" className="dropdown-item "><i className="bi bi-mouse2"></i> PTC sites</Link>

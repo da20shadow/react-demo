@@ -1,6 +1,8 @@
 import {useNavigate} from 'react-router-dom';
-
-function Login() {
+import * as authService from '../services/authServices';
+function Login({
+  onLoginHandler
+}) {
 
   let navigate = useNavigate();
 
@@ -9,7 +11,11 @@ function Login() {
     
     //TODO: Login
 
-    // navigate('/account',{replace: true});
+    let formData = new FormData(e.currentTarget);
+    let email = formData.get('email');
+
+    authService.login(email);
+    onLoginHandler(email);
     navigate('/account');
   }
 

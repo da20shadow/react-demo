@@ -1,8 +1,11 @@
-import CategoryMenu from "./CategoryMenu";
-import MainMenu from "./MainMenu";
+import './assets/css/header.css';
+import CategoryMenu from "./components/CategoryMenu";
+import MainMenu from "./components/MainMenu";
 import {Link} from 'react-router-dom';
 
-function Header() {
+function Header({
+    isLogged,
+}) {
     return (
         <nav className="navbar navbar-expand-md border-bottom">
 
@@ -29,7 +32,7 @@ function Header() {
                     {/* Dropdown Category menu */}
                     <CategoryMenu/>
                     {/* Main Menu */}
-                    <MainMenu />
+                    <MainMenu isLogged={isLogged} />
                 </div>
             </div>
 

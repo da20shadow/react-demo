@@ -1,0 +1,50 @@
+/* ---- Project Colors ---- */
+.activeNav {
+  background-color: lightblue;
+}
+
+.dropdown-item {
+  color: #002869;
+  font-weight: 600;
+  width: 94%;
+  margin: 0 auto;
+}
+
+.dropdown-item:hover {
+  background-color: #e5f0fa;
+  color: #086bc9;
+  border-radius: 0.325rem;
+}
+
+.dropdown-item:hover i {
+  color: #086bc9;
+}
+
+#categories-menu {
+  background-color: #e5f0fa;
+}
+
+.dropdown-menu {
+  font-weight: 600;
+  min-width: 16rem;
+}
+
+.nav-link {
+  color: #002869;
+  font-weight: 600;
+}
+
+#avatar-dropdown {
+  border-radius: 0.325rem;
+}
+
+.sign-out:hover {
+  background-color: rgba(214, 41, 62, 0.1);
+  color: #d6293e;
+  border-radius: 0.325rem;
+}
+
+.sign-out:hover i {
+  color: #d6293e;
+}
+/*# sourceMappingURL=header.css.map */
