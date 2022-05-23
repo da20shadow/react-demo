@@ -1,4 +1,5 @@
 import {Link, NavLink} from 'react-router-dom';
+import Logout from '../../Logout';
 
 function MainMenu({
     isLogged,
@@ -43,6 +44,7 @@ function MainMenu({
             + (isActive ? ' activeNav' : '')}>
                 <i className="bi bi-person-plus"></i> Edit Profile
             </NavLink>
+            <Link to='/logout' className='nav-link' element={<Logout />}>Logout</Link>
         </>);
 
     return (

@@ -9,16 +9,17 @@ function Login({
   const onFormSubmit = (e) => {
     e.preventDefault();
     
-    //TODO: Login
-
     let formData = new FormData(e.currentTarget);
-    let email = formData.get('email');
+    let {email, password} = Object.fromEntries(formData);
+
+    console.log(email);
+    console.log(password);
 
     authService.login(email);
     onLoginHandler(email);
     navigate('/account');
   }
-
+  const defaultEmail = sessionStorage.getItem('email');
   return (
     <div className="container my-4">
       <div className="row justify-content-center">
@@ -31,16 +32,16 @@ function Login({
             <form className="needs-validation was-validated" onSubmit={onFormSubmit}>
               {/* Email */}
               <div className="mb-1">
-                <label className="form-label" htmlFor="loginEmail">
+                <label className="form-label" htmlFor="email">
                   Email
                 </label>
                 <input
                   className="form-control"
                   type="email"
                   name="email"
+                  defaultValue={defaultEmail}
                   placeholder="Email"
                   pattern="^([a-zA-Z0-9_.-])+@([a-zA-Z])+[.]([a-zA-Z]{2,4})+$"
-                  id="loginEmail"
                   required="required"
                 />
                 <div className="invalid-feedback">Enter Email!</div>

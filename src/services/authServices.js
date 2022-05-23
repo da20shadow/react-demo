@@ -4,6 +4,11 @@ export const login = (username) => {
     sessionStorage.setItem('email',username);
 }
 
+export const logout = () => {
+    sessionStorage.removeItem('username');
+    sessionStorage.removeItem('email');
+}
+
 export const getUser =() => {
     // let username = localStorage.getItem('username');
     let user = sessionStorage.getItem('email');

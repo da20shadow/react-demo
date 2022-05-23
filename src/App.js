@@ -5,6 +5,7 @@ import Home from './Home/Home';
 import User from './User/User';
 import Profile from './User/Profile';
 import Account from './User/Account';
+import Logout from './Logout';
 import Error from './Home/Error';
 import * as React from 'react';
 import * as authService from './services/authServices';
@@ -16,7 +17,7 @@ const Register = React.lazy(() => import('./User/Register'));
 
 function App() {
 
-  let [userInfo,setUserInfo] = React.useState({isLogged: false, username: ''});
+  let [userInfo,setUserInfo] = React.useState({isLogged: false, user: ''});
 
   React.useEffect(() =>{
     let user = authService.getUser();
@@ -30,6 +31,12 @@ function App() {
     setUserInfo({
       isLogged: true,
       user: username,
+    })
+  }
+  const onLogoutHandler = (username) => {
+    setUserInfo({
+      isLogged: false,
+      user: null,
     })
   }
 
@@ -57,12 +64,10 @@ function App() {
               } 
             />
             <Route path="/account" element={<Account {...userInfo} />} />
+            <Route path='profile' element={<Profile {...userInfo} />} />
             <Route path="/user/:username/:userId" element={<User />} />
             <Route path="/profile/:userId" element={<Profile />} />
-            <Route path="/logout" render={(props) =>{
-                console.log('Logged out!!!');
-                // return <Redirect to="/home" />
-            }} />
+            <Route path="/logout" element={<Logout onLogoutHandler={onLogoutHandler} />} />
             <Route path="*" element={<Error />} /> {/* Default */}
 
         </Routes>
