@@ -9,7 +9,7 @@ function ProfileDetails ({
     // let [username,setUsername] = useState('');
     let stateResult = useState('');
     const sate = stateResult[0];
-    const setState = stateResult[0];
+    const setState = stateResult[1];
 
     useEffect(() => {
         
